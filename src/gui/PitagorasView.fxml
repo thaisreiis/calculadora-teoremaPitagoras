@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="469.0" stylesheets="@PitagorasStyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PitagorasViewController">
+   <content>
+      <VBox prefHeight="287.0" prefWidth="463.0">
+         <children>
+            <Label text="DIGITE DOIS VALORES" textFill="#eeff00">
+               <VBox.margin>
+                  <Insets left="130.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <GridPane prefHeight="217.0" prefWidth="367.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="163.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="407.0" minWidth="10.0" prefWidth="162.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="407.0" minWidth="10.0" prefWidth="106.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="5.0" top="50.0" />
+               </VBox.margin>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="181.0" text="       Digite o valor do cateto A:" textAlignment="RIGHT" textFill="WHITE" />
+                  <Label prefHeight="17.0" prefWidth="174.0" text="       Digite o valor do cateto B:" textFill="WHITE" GridPane.rowIndex="1" />
+                  <Label prefHeight="17.0" prefWidth="178.0" text="  Digite o valor da hipotenusa:" textFill="WHITE" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtCatetoA" prefHeight="25.0" prefWidth="155.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtCatetoB" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtHipotenusa" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Button fx:id="btCalcular" minWidth="70.0" mnemonicParsing="false" onAction="#onBtCalcular" prefHeight="37.0" prefWidth="70.0" text="Calcular" />
+                        <Button fx:id="btLimpar" minWidth="61.0" mnemonicParsing="false" onAction="#onBtLimpar" prefHeight="37.0" prefWidth="80.0" text="Limpar">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="txtResultado" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label prefHeight="17.0" prefWidth="176.0" text="                              Resultado:" textFill="WHITE" GridPane.rowIndex="4" />
+                  <Label fx:id="labelErrorCatetoA" textFill="WHITE" GridPane.columnIndex="2" />
+                  <Label fx:id="labelErrorCatetoB" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label fx:id="labelErrorHipotenusa" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+   </content>
+</ScrollPane>
