@@ -57,7 +57,6 @@ public class PitagorasViewController implements Initializable {
 		try {
 			pitagoras = validacaoCampos();
 			Calcular();
-			
 		} catch (ValidationException e) {
 			setErrorMessages(e.getErrors());
 		}
@@ -99,6 +98,8 @@ public class PitagorasViewController implements Initializable {
 				catetoBQuadrado = Math.pow(Utils.tryParseToDouble(txtCatetoB.getText()), 2);
 
 				resultadoFinal = Math.sqrt(hipotenusaQuadrado - catetoBQuadrado);
+				String total = String.valueOf(resultadoFinal);
+				txtResultado.setText(total);
 			}
 		} else if (txtCatetoB.getText() == null || txtCatetoB.getText().trim().equals("")) {
 
@@ -115,6 +116,8 @@ public class PitagorasViewController implements Initializable {
 				catetoAQuadrado = Math.pow(Utils.tryParseToDouble(txtCatetoA.getText()), 2);
 
 				resultadoFinal = Math.sqrt(hipotenusaQuadrado - catetoAQuadrado);
+				String total = String.valueOf(resultadoFinal);
+				txtResultado.setText(total);
 			}
 		} else if (txtHipotenusa.getText() == null || txtHipotenusa.getText().trim().equals("")) {
 
@@ -122,15 +125,12 @@ public class PitagorasViewController implements Initializable {
 			catetoBQuadrado = Math.pow(Utils.tryParseToDouble(txtCatetoB.getText()), 2);
 
 			resultadoFinal = Math.sqrt(catetoAQuadrado + catetoBQuadrado);
+			String total = String.valueOf(resultadoFinal);
+			txtResultado.setText(total);
 		} else {
 			Alerts.showAlert("Ops", null, "Você digitou um campo a mais! Digite apenas dois números!", AlertType.ERROR);
-			txtCatetoA.setText("");
-			txtCatetoB.setText("");
-			txtHipotenusa.setText("");
-			txtResultado.setText("0");
+			onBtLimpar();
 		}
-		String total = String.valueOf(resultadoFinal);
-		txtResultado.setText(total);
 	}
 
 	// Metodo para vincular as mensagens de erros

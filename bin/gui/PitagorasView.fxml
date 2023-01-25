@@ -12,23 +12,31 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="469.0" stylesheets="@PitagorasStyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PitagorasViewController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="309.0" prefWidth="484.0" stylesheets="@PitagorasStyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PitagorasViewController">
    <content>
-      <VBox prefHeight="287.0" prefWidth="463.0">
+      <VBox prefHeight="305.0" prefWidth="477.0">
          <children>
-            <Label text="DIGITE DOIS VALORES" textFill="#eeff00">
+            <Label text="Calculadora - Teorema de Pitágoras" textFill="#eeff00">
                <VBox.margin>
-                  <Insets left="130.0" top="20.0" />
+                  <Insets left="80.0" top="10.0" />
                </VBox.margin>
                <font>
                   <Font name="Arial" size="18.0" />
                </font>
             </Label>
-            <GridPane prefHeight="217.0" prefWidth="367.0">
+            <Label text="Digite dois valores:" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="160.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <GridPane prefHeight="174.0" prefWidth="458.0">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="163.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="407.0" minWidth="10.0" prefWidth="162.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="407.0" minWidth="10.0" prefWidth="106.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="173.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="407.0" minWidth="10.0" prefWidth="169.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="407.0" minWidth="10.0" prefWidth="130.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -60,11 +68,20 @@
                         </Button>
                      </children>
                   </HBox>
-                  <TextField fx:id="txtResultado" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="txtResultado" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                   <Label prefHeight="17.0" prefWidth="176.0" text="                              Resultado:" textFill="WHITE" GridPane.rowIndex="4" />
-                  <Label fx:id="labelErrorCatetoA" textFill="WHITE" GridPane.columnIndex="2" />
-                  <Label fx:id="labelErrorCatetoB" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Label fx:id="labelErrorHipotenusa" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label fx:id="labelErrorCatetoA" textFill="WHITE" GridPane.columnIndex="2">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding></Label>
+                  <Label fx:id="labelErrorCatetoB" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding></Label>
+                  <Label fx:id="labelErrorHipotenusa" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding></Label>
                </children>
             </GridPane>
          </children>
