@@ -1,9 +1,8 @@
-# Calculadora - Teorema de Pitágoras
+# 🖥️ Calculadora - Teorema de Pitágoras
 
-Essa API foi criada para calcular a relação entre os lados de um triângulo
-retângulo - Teorema de Pitágoras.
+Calcular a relação entre os lados de um triângulo retângulo - Teorema de Pitágoras.
 
-## 💻 Tecnologias
+## ⚙️ Tecnologias
 
 - Java 17
 - JavaFX
